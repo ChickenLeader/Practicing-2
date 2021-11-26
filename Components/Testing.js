@@ -11,9 +11,20 @@ export const Testing = () => {
 
   return (
     <View>
-      <Button title="Increment" onPress={() => {dispatch(Increment()),console.log("ssss")}} />
+      <Button
+        title="Increment"
+        onPress={() => {
+          console.log("ssss");
+          dispatch(Increment());
+        }}
+      />
       <Text>{counter}</Text>
-      <Button title="Decrement" onPress={() => dispatch(Decrement())} />
+      <Button
+        title="Decrement"
+        onPress={() => {
+          dispatch(Decrement());
+        }}
+      />
 
       {loggedIn ? (
         <Text onPress={() => dispatch(loggedIn(true))}>Sign In </Text>
